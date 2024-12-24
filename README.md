@@ -48,4 +48,15 @@ variable "each_vm" {
 
 ## Задача 4
 
+1. В файле ansible.tf создайте inventory-файл для ansible.
+
+![ansible](task4/ansible.png)
+
+2. Инвентарь должен содержать 3 группы и быть динамическим
+3. Добавьте в инвентарь переменную fqdn.
+
+![tpl](task4/tpl.png)
+
+4. Выполните код. Приложите скриншот получившегося файла.
+
 ![inventory](task4/inventory.png)
