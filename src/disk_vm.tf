@@ -1,14 +1,9 @@
-resource "yandex_compute_disk" "default" {
-  count    = 3
-  name     = "disk-name-${count.index}"
-  size     = "1"
-  type     = "network-ssd"
+resource "yandex_compute_disk" "external" {
+  count    = var.vm_ext_disks # 3
+  name     = "ext-disk-${count.index}"
+  size     = var.vm_ext_disk_size # 1Gb
+  type     = var.vm_ext_disk_type
   zone     = var.default_zone
-  image_id = "fd8nru7hnggqhs9mkqps"
-
-  labels = {
-    environment = "test"
-  }
 }
 
 resource "yandex_compute_instance" "storage" {
@@ -30,9 +25,9 @@ resource "yandex_compute_instance" "storage" {
   }
 
   dynamic "secondary_disk" {
-    for_each = yandex_compute_disk.disk.*.id
+    for_each = yandex_compute_disk.external.*.id
     content {
-      disk_id = yandex_compute_disk.disk["${secondary_disk.key}"].id
+      disk_id = yandex_compute_disk.external["${secondary_disk.key}"].id
     }
   }
 

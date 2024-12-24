@@ -100,3 +100,21 @@ variable "each_vm" {
     }
   ]
 }
+
+variable "vm_ext_disks" {
+  type        = number
+  default     = 3
+  description = "count of external disks"
+}
+
+variable "vm_ext_disk_size" {
+  type        = number
+  default     = 1
+  description = "size of external disks, Gb"
+}
+
+variable "vm_ext_disk_type" {
+  type        = string
+  default     = "network-ssd"
+  description = "type of external disks"
+}
