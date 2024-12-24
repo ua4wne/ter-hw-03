@@ -31,3 +31,10 @@ variable "each_vm" {
 ![local](task2/local.png)
 
 Инициализируйте проект, выполните код.
+
+![apply](task2/apply.png)
+![result](task2/result.png)
+
+## Задача 3
+
+1. Создайте 3 одинаковых виртуальных диска размером 1 Гб с помощью ресурса yandex_compute_disk и мета-аргумента count в файле disk_vm.tf.
