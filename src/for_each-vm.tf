@@ -1,6 +1,7 @@
 resource "yandex_compute_instance" "db" {
   for_each    = { for env in var.each_vm : env.vm_name => env }
   name        = each.value.vm_name
+  hostname    = each.value.vm_name
   platform_id = var.vm_web_platform
   zone        = var.default_zone
 

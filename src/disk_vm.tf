@@ -1,14 +1,15 @@
 resource "yandex_compute_disk" "external" {
-  count    = var.vm_ext_disks # 3
-  name     = "ext-disk-${count.index}"
-  size     = var.vm_ext_disk_size # 1Gb
-  type     = var.vm_ext_disk_type
-  zone     = var.default_zone
+  count = var.vm_ext_disks # 3
+  name  = "ext-disk-${count.index}"
+  size  = var.vm_ext_disk_size # 1Gb
+  type  = var.vm_ext_disk_type
+  zone  = var.default_zone
 }
 
 resource "yandex_compute_instance" "storage" {
 
   name        = "storage"
+  hostname    = "storage"
   platform_id = var.vm_web_platform
   zone        = var.default_zone
 

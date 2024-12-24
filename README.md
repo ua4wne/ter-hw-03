@@ -45,3 +45,7 @@ variable "each_vm" {
 
 ![storage](task3/storage.png)
 ![result](task3/apply.png)
+
+## Задача 4
+
+![inventory](task4/inventory.png)
