@@ -68,3 +68,10 @@ variable "each_vm" {
 ![output](task5/output.png)
 
 ## Задача 6*
+
+1. Используя null_resource и local-exec, примените ansible-playbook к ВМ из ansible inventory-файла. Готовый код возьмите из демонстрации к лекции. Для зачёта предоставьте код вместе с основной частью задания.
+
+>Ответ: код находится в файлах [ansible.tf](./src/ansible.tf) и [test.yml](./src/test.yml)
+
+## Задача 7*
+
