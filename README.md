@@ -93,3 +93,11 @@ ${i["name"]} ansible_host=${i["network_interface"][0]["nat_ip_address"] platform
 
 ![right](task8/right.png)
 
+## Задача 9*
+
+Напишите terraform выражения, которые сформируют списки:
+
+1. ["rc01","rc02","rc03","rc04",rc05","rc06",rc07","rc08","rc09","rc10....."rc99"] те список от "rc01" до "rc99"
+
+>Ответ: `[for i in range(100) : format("%s%02d", "rc", i) if ]`
+
