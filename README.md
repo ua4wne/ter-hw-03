@@ -73,8 +73,6 @@ variable "each_vm" {
 
 >Ответ: код находится в файлах [ansible.tf](./src/ansible.tf) и [test.yml](./src/test.yml)
 
-## Задача 7*
-
 ## Задача 8*
 
 Идентифицируйте и устраните намеренно допущенную в tpl-шаблоне ошибку. Обратите внимание, что terraform сам сообщит на какой строке и в какой позиции ошибка!
@@ -99,5 +97,5 @@ ${i["name"]} ansible_host=${i["network_interface"][0]["nat_ip_address"] platform
 
 1. ["rc01","rc02","rc03","rc04",rc05","rc06",rc07","rc08","rc09","rc10....."rc99"] те список от "rc01" до "rc99"
 
->Ответ: `[for i in range(100) : format("%s%02d", "rc", i) if ]`
+>Ответ: `[for i in range(1,100) : format("%s%02d", "rc", i)]`
 
