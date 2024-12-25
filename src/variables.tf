@@ -84,18 +84,20 @@ variable "metadata_map" {
 }
 
 variable "each_vm" {
-  type = list(object({ vm_name = string, cpu = number, ram = number, disk_volume = number, core_fraction = number }))
+  type = list(object({ vm_name = string, cpu = number, ram = number, platform = string, zone = string, core_fraction = number }))
   default = [
     { vm_name       = "main",
       cpu           = 4,
       ram           = 2,
-      disk_volume   = 1
+      platform      = "standard-v1"
+      zone          = "ru-central1-a"
       core_fraction = 5
     },
     { vm_name       = "replica",
       cpu           = 2,
       ram           = 1,
-      disk_volume   = 2
+      platform      = "standard-v1"
+      zone          = "ru-central1-a"
       core_fraction = 5
     }
   ]
