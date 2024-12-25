@@ -60,3 +60,11 @@ variable "each_vm" {
 4. Выполните код. Приложите скриншот получившегося файла.
 
 ![inventory](task4/inventory.png)
+
+## Задача 5*
+
+1. Напишите output, который отобразит ВМ из ваших ресурсов count и for_each в виде списка словарей. Приложите скриншот вывода команды terrafrom output.
+
+![output](task5/output.png)
+
+## Задача 6*
