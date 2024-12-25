@@ -1,6 +1,8 @@
 [webservers]
 %{~ for i in webservers ~}
-${i["name"]} ansible_host=${i["network_interface"][0]["nat_ip_address"]} platform_id=${i["platform_id"]}
+
+${i["name"]}   ansible_host=${i["network_interface"][0]["nat_ip_address"]}  fqdn=${i["fqdn"]}
+
 %{~ endfor ~}
 
 [databases]
