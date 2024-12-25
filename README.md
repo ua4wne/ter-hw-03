@@ -75,3 +75,19 @@ variable "each_vm" {
 
 ## Задача 7*
 
+## Задача 8*
+
+Идентифицируйте и устраните намеренно допущенную в tpl-шаблоне ошибку. Обратите внимание, что terraform сам сообщит на какой строке и в какой позиции ошибка!
+```
+[webservers]
+%{~ for i in webservers ~}
+${i["name"]} ansible_host=${i["network_interface"][0]["nat_ip_address"] platform_id=${i["platform_id "]}}
+%{~ endfor ~}
+```
+
+>Ответ: ошибок три. Первая - отсутствует закрывающая скобка в переменной ${i["network_interface"][0]["nat_ip_address"]
+>Вторая ошибка - пробел в переменной ${i["platform_id "]
+>Третья ошибка - лишняя закрывающая скобка в переменной ${i["platform_id "]}}. Правильно должно быть так
+
+![right](task8/right.png)
+
