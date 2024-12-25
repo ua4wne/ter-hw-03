@@ -63,7 +63,7 @@ variable "each_vm" {
 
 ## Задача 5*
 
-1. Напишите output, который отобразит ВМ из ваших ресурсов count и for_each в виде списка словарей. Приложите скриншот вывода команды terrafrom output.
+1. Напишите [output](./src/output.tf), который отобразит ВМ из ваших ресурсов count и for_each в виде списка словарей. Приложите скриншот вывода команды terrafrom output.
 
 ![output](task5/output.png)
 
