@@ -48,7 +48,7 @@ variable "vm_web_preemptible" {
 
 variable "vm_web_nat" {
   type        = bool
-  default     = true
+  default     = false
   description = "nat enable"
 }
 
